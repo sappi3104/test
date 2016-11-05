@@ -19,6 +19,7 @@ namespace ConsoleApplication2
 
             // 画面モードの設定
             DX.SetGraphMode(800, 600, 16);
+            //DX.SetWindowSizeExtendRate(0.5);
 
             // 描画先を裏画面にセット
             DX.SetDrawScreen(DX.DX_SCREEN_BACK);
@@ -66,6 +67,13 @@ namespace ConsoleApplication2
         {
             // 画面の初期化
             DX.ClearDrawScreen();
+
+            //DX.DrawString(0, 0, "aaaaaaaaaaaaaaa", DX.GetColor(255,255,255));
+
+            int x, y;
+            DX.GetMousePoint(out x, out y);
+
+            DX.DrawString(x, y, "aaaaaaaaaaaaaaa", DX.GetColor(255, 255, 255));
 
             //int x = 400;
             //int y = 300;
